@@ -9,7 +9,7 @@ class rets_reader:
         self.username = username
         self.password = password
     
-    def search(self, resource_class='RE_1', query='()', limit=1000):
+    def search(self, resource_class='RES', query='()', limit=1000):
         with Session(self.url, self.username, self.password) as s:
             search_results = s.search(resource='Property',resource_class=resource_class, standard_names=1, limit=limit, dmql_query=query)
 

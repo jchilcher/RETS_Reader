@@ -44,12 +44,12 @@ This tool is designed to be a command line application, you can use it to query 
 
 In this example, we run in the residential table, looking for 100 entries where there are 3 bedrooms
 ```bash
-$ python run.py RE_1 "(Beds=3)" 100
+$ python run.py RES "(Beds=3)" 100
 ```
 
 without the limit argument, run.py will default to 1 for safety
 ```bash
-$ python run.py RE_1 "(Beds=3)"
+$ python run.py RES "(Beds=3)"
 ```
 
 Help
