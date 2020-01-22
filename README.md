@@ -23,14 +23,14 @@ A step by step series of examples that tell you how to get a development env run
 set up virtual environment
 
 ```bash
-virtualenv ./env 
+$ virtualenv ./env 
 ```
 
 enter virtual environment and install requirements
 
 ```bash
-source ./env/bin/activate
-pip install -r requirements.txt
+$ source ./env/bin/activate
+$ pip install -r requirements.txt
 ```
 
 Create a `settings.cfg` file to specify the url and credentials to the rets database you would like to access
@@ -42,9 +42,22 @@ See [settings.cfg.example](settings.cfg.example)
 
 This tool is designed to be a command line application, you can use it to query whichever rets database you have specified by invoking it as such
 
+In this example, we run in the residential table, looking for 100 entries where there are 3 bedrooms
 ```bash
-
+$ python run.py RE_1 "(Beds=3)" 100
 ```
+
+without the limit argument, run.py will default to 1 for safety
+```bash
+$ python run.py RE_1 "(Beds=3)"
+```
+
+Help
+```bash
+$ python run.py help
+python run.py PROPERTY_TYPE DMQP_QUERY [LIMIT]
+```
+
 
 ## Authors
 
